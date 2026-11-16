@@ -1,26 +1,9 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+html { scroll-behavior: smooth; }
+body { background: #EEF1FF; color: #14163B; font-family: var(--font-body), system-ui, sans-serif; }
+h1, h2, h3 { font-family: var(--font-head), system-ui, sans-serif; letter-spacing: -0.02em; }
+.card { background: #fff; border: 2px solid #14163B; border-radius: 1rem; box-shadow: 5px 5px 0 #14163B; }
+.btn { display: inline-block; border: 2px solid #14163B; border-radius: 999px; padding: .75rem 1.4rem; font-weight: 700; box-shadow: 3px 3px 0 #14163B; transition: transform .15s, box-shadow .15s; }
+.btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #14163B; }
+:focus-visible { outline: 3px solid #3B3BF0; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
