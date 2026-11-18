@@ -1,4 +1,5 @@
 import { profile } from "@/lib/data";
+import Image from "next/image";
 export default function Hero() {
   return (
     <section id="inicio" className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-[1.4fr_1fr]">
@@ -12,7 +13,9 @@ export default function Hero() {
           <a href="#proyectos" className="btn bg-white">Ver proyectos</a>
         </div>
       </div>
-      <div className="card mx-auto grid aspect-square w-full max-w-xs -rotate-3 place-items-center bg-[#FF8FB1] text-8xl font-black" role="img" aria-label="Avatar">{profile.initials}</div>
-    </section>
+      <div className="card relative mx-auto aspect-[4/5] w-full max-w-sm -rotate-2 overflow-hidden bg-[#FF8FB1]">
+        <Image src="/foto.png" alt="" fill priority sizes="384px" className="object-cover object-top" />
+      </div>
+      </section>
   );
 }
