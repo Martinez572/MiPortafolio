@@ -4,8 +4,8 @@ export default function Footer() {
     <footer className="border-t-2 border-[#14163B] bg-[#14163B] text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
         <div>
-          <p className="font-bold">© {new Date().getFullYear()} {profile.name}</p>
-          <p className="text-sm opacity-70">Hecho con Next.js + Tailwind</p>
+        <p className="font-bold">© 2026 {profile.name}</p>          
+        <p className="text-sm opacity-70">Hecho con Next.js + Tailwind</p>
         </div>
         <nav className="flex flex-wrap gap-4 text-sm" aria-label="Pie de página">
           {nav.map((n) => <a key={n.id} href={`#${n.id}`} className="hover:underline">{n.label}</a>)}
