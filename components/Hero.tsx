@@ -17,7 +17,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="card relative mx-auto aspect-[4/5] w-full max-w-sm -rotate-2 overflow-hidden bg-[#FF8FB1]">
-        <Image src="/foto.png" alt="" fill priority sizes="384px" className="object-cover object-top" />
+        <Image src="/sobre-mi/1.png" alt="" fill priority sizes="384px" className="object-cover object-top" />
       </div>
     </section>
   );
