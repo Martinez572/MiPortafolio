@@ -1,9 +1,24 @@
 @import "tailwindcss";
+:root { --text: #14163B; --line: #14163B; --paper: #EEF1FF; --surface: #fff; }
+.dark { --text: #EEF1FF; --line: #8A8EF0; --paper: #0E1020; --surface: #1A1D3A; }
 html { scroll-behavior: smooth; }
-body { background: #EEF1FF; color: #14163B; font-family: var(--font-body), system-ui, sans-serif; }
+body { background: var(--paper); color: var(--text); font-family: var(--font-body), system-ui, sans-serif; }
 h1, h2, h3 { font-family: var(--font-head), system-ui, sans-serif; letter-spacing: -0.02em; }
-.card { background: #fff; border: 2px solid #14163B; border-radius: 1rem; box-shadow: 5px 5px 0 #14163B; }
-.btn { display: inline-block; border: 2px solid #14163B; border-radius: 999px; padding: .75rem 1.4rem; font-weight: 700; box-shadow: 3px 3px 0 #14163B; transition: transform .15s, box-shadow .15s; }
-.btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #14163B; }
+@layer components {
+  .card { background: var(--surface); border: 2px solid var(--line); border-radius: 1rem; box-shadow: 5px 5px 0 var(--line); }
+  .btn { display: inline-block; border: 2px solid var(--line); border-radius: 999px; padding: .75rem 1.4rem; font-weight: 700; box-shadow: 3px 3px 0 var(--line); transition: transform .15s, box-shadow .15s; }
+  .btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--line); }
+}
+/* Modo oscuro: sobrescribe los colores fijos de los componentes */
+.dark .bg-white { background: var(--surface); }
+.dark .bg-\[\#EEF1FF\] { background: var(--paper); }
+.dark .bg-\[\#EEF1FF\]\/90 { background: rgb(14 16 32 / .9); }
+.dark .bg-\[\#14163B\] { background: #05060F; }
+.dark .border-\[\#14163B\] { border-color: var(--line); }
+.dark .border-\[\#14163B\]\/30 { border-color: rgb(138 142 240 / .4); }
+.dark .shadow-\[3px_3px_0_\#14163B\] { box-shadow: 3px 3px 0 var(--line); }
+.dark .text-\[\#3B3BF0\] { color: #A9ACFF; }
+.dark :is(.bg-\[\#FFD84D\], .bg-\[\#8FE3C8\], .bg-\[\#FF8FB1\]) { color: #14163B; }
+.dark input, .dark textarea { color: var(--text); }
 :focus-visible { outline: 3px solid #3B3BF0; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
