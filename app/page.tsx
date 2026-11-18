@@ -7,5 +7,5 @@ import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 export default function Home() {
-  return (<><Navbar /><main><Hero /><About /><Projects /><Testimonials /><Experience /><Contact /></main><Footer /></>);
+  return (<><Navbar /><main><Hero /><About /><Projects />{/* <Testimonials /> */} /<Experience /><Contact /></main><Footer /></>);
 }
